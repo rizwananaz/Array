@@ -1,51 +1,66 @@
-// Array of products
-const products = [
-    {
-        name: "Laptop",
-        price: "$999",
-        description: "High performance laptop with 16GB RAM and 512GB SSD.",
-        image: "https://via.placeholder.com/200x150?text=Laptop" // Placeholder image URL
-    },
-    {
-        name: "Smartphone",
-        price: "$499",
-        description: "Latest smartphone with 6.5-inch display and 128GB storage.",
-        image: "https://via.placeholder.com/200x150?text=Smartphone" // Placeholder image URL
-    },
-    {
-        name: "Headphones",
-        price: "$149",
-        description: "Noise-cancelling over-ear headphones with Bluetooth.",
-        image: "https://via.placeholder.com/200x150?text=Headphones" // Placeholder image URL
-    },
-    {
-        name: "Smartwatch",
-        price: "$199",
-        description: "Fitness smartwatch with heart rate monitoring and GPS.",
-        image:"https://via.placeholder.com/200x150?text=Smartwatch" // Placeholder image URL
-    }
-];
+// Arrays
+let fruits = ["Apple", "Orange", "Plum"];
 
-// Function to render the products dynamically
-function renderProducts() {
-    const productList = document.getElementById("product-list");
+// Accessing array elements
+console.log(fruits[0]); // Apple
+console.log(fruits[1]); // Orange
+console.log(fruits[2]); // Plum
 
-    // Loop through the array and create HTML for each product
-    products.forEach(product => {
-        const productCard = document.createElement("div");
-        productCard.classList.add("product-card");
+// Modifying array elements
+fruits[2] = 'Pear';  // Replace 'Plum' with 'Pear'
+console.log(fruits); // ["Apple", "Orange", "Pear"]
 
-        productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p class="price">${product.price}</p>
-        `;
+// Adding a new item to the array
+fruits.push('Lemon');
+console.log(fruits); // ["Apple", "Orange", "Pear", "Lemon"]
 
-        // Append each product card to the product list
-        productList.appendChild(productCard);
-    });
+// Array length
+console.log(fruits.length); // 4
+
+// Conditional Statements (If, Else, Else-If, Switch)
+
+// If Statement
+let year = 2015;
+if (year === 2015) {
+    console.log('You guessed it right!');
+} else {
+    console.log('How can you be so wrong?');
 }
 
-// Call the function to render products when the page loads
-renderProducts();
+// Else-If Statement
+if (year < 2015) {
+    console.log('Too early...');
+} else if (year > 2015) {
+    console.log('Too late');
+} else {
+    console.log('Exactly!');
+}
+
+// Switch Statement
+let a = 3 + 2;
+switch (a) {
+    case 3:
+        console.log('Too small');
+        break;
+    case 4:
+        console.log('Exactly!');
+        break;
+    case 5:
+        console.log('Too large');
+        break;
+    default:
+        console.log('I don\'t know such values');
+}
+
+// Working with Array Methods
+// Pop - Remove the last element
+fruits.pop();
+console.log(fruits); // ["Apple", "Orange", "Pear"]
+
+// Shift - Remove the first element
+fruits.shift();
+console.log(fruits); // ["Orange", "Pear"]
+
+// Unshift - Add an element to the beginning
+fruits.unshift('Apple');
+console.log(fruits); // ["Apple", "Orange", "Pear"]

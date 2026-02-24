@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays and Conditional Statements</title>
+</head>
+<body>
+    <h1>Check the Console for Output</h1>
+
+    <script>
+        // Arrays
+        let fruits = ["Apple", "Orange", "Plum"];
+
+        // Accessing array elements
+        console.log(fruits[0]); // Apple
+        console.log(fruits[1]); // Orange
+        console.log(fruits[2]); // Plum
+
+        // Modifying array elements
+        fruits[2] = 'Pear';  // Replace 'Plum' with 'Pear'
+        console.log(fruits); // ["Apple", "Orange", "Pear"]
+
+        // Adding a new item to the array
+        fruits.push('Lemon');
+        console.log(fruits); // ["Apple", "Orange", "Pear", "Lemon"]
+
+        // Array length
+        console.log(fruits.length); // 4
+
+        // Conditional Statements (If, Else, Else-If, Switch)
+
+        // If Statement
+        let year = 2015;
+        if (year === 2015) {
+            console.log('You guessed it right!');
+        } else {
+            console.log('How can you be so wrong?');
+        }
+
+        // Else-If Statement
+        if (year < 2015) {
+            console.log('Too early...');
+        } else if (year > 2015) {
+            console.log('Too late');
+        } else {
+            console.log('Exactly!');
+        }
+
+        // Switch Statement
+        let a = 2 + 2;
+        switch (a) {
+            case 3:
+                console.log('Too small');
+                break;
+            case 4:
+                console.log('Exactly!');
+                break;
+            case 5:
+                console.log('Too large');
+                break;
+            default:
+                console.log('I don\'t know such values');
+        }
+
+        // Working with Array Methods
+        // Pop - Remove the last element
+        fruits.pop();
+        console.log(fruits); // ["Apple", "Orange", "Pear"]
+
+        // Shift - Remove the first element
+        fruits.shift();
+        console.log(fruits); // ["Orange", "Pear"]
+
+        // Unshift - Add an element to the beginning
+        fruits.unshift('Apple');
+        console.log(fruits); // ["Apple", "Orange", "Pear"]
+    </script>
+</body>
+</html>
