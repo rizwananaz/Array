@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Loop Continue Example</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    padding:40px;
+    text-align:center;
+}
+
+.box{
+    background:white;
+    width:450px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#output{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>For Loop Continue Example</h2>
+
+<button onclick="runLoop()">Run Program</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+function runLoop(){
+
+    let result = "";
+
+    for (let i = 0; i < 10; i++) {
+
+        if (i === 9) continue;  // skip number 5
+
+        result += i + " ";
+    }
+
+    document.getElementById("output").innerHTML =
+        "Numbers (5 skipped): <br>" + result;
+
+}
+
+</script>
+
+</body>
+</html>

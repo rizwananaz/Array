@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Power Function</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    text-align:center;
+    padding:40px;
+}
+
+.box{
+    background:white;
+    width:400px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+    padding:8px;
+    margin:5px;
+    width:120px;
+}
+
+button{
+    padding:10px 20px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#result{
+    margin-top:15px;
+    font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Power Calculator</h2>
+
+<input type="number" id="x" placeholder="Enter x"><br>
+<input type="number" id="n" placeholder="Enter n"><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function pow(x, n) {
+
+    if (n < 0) {
+        alert("Negative n not supported");
+        return;
+    }
+
+    let result = 1;
+
+    for (let i = 0; i < n; i++) {
+        result *= x;
+    }
+
+    return result;
+}
+
+function calculate(){
+
+    let x = Number(document.getElementById("x").value);
+    let n = Number(document.getElementById("n").value);
+
+    let output = pow(x,n);
+
+    if(output !== undefined){
+        document.getElementById("result").innerHTML =
+        "Result: " + output;
+    }
+
+}
+
+</script>
+
+</body>
+</html>

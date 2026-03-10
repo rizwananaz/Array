@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Show Function Example</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+    text-align:center;
+}
+
+.container{
+    background:white;
+    width:500px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+pre{
+    text-align:left;
+    background:#f0f0f0;
+    padding:15px;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Aligned Parameters Example</h2>
+
+<pre>
+show(parameters,
+     aligned,   // 5 spaces padding at the left
+     one,
+     after,
+     another)
+</pre>
+
+<button onclick="runShow()">Run Function</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function show(
+    parameters,
+    aligned,
+    one,
+    after,
+    another
+){
+    document.getElementById("result").innerHTML =
+        "Parameters: " + parameters + "<br>" +
+        "Aligned: " + aligned + "<br>" +
+        "One: " + one + "<br>" +
+        "After: " + after + "<br>" +
+        "Another: " + another;
+}
+
+function runShow(){
+    show("value1","value2","value3","value4","value5");
+}
+
+</script>
+
+</body>
+</html>

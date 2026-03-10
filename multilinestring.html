@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript If Example</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+    padding:40px;
+}
+
+.container{
+    background:white;
+    width:600px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 20px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+pre{
+    background:#f0f0f0;
+    padding:15px;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Backtick Multiline String Example</h2>
+
+<pre id="text"></pre>
+
+<h2>If Condition Example</h2>
+
+<button onclick="checkCondition()">Run Condition</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+// Backtick multiline string
+let str = `
+ECMA International's TC39 is a group of JavaScript developers,
+implementers, academics, and more, collaborating with the community
+to maintain and evolve the definition of JavaScript.
+`;
+
+document.getElementById("text").innerText = str;
+
+
+// Variables
+let id = 123;
+let moonPhase = "Waning Gibbous";
+let zodiacSign = "Libra";
+
+// Function
+function letTheSoccerBegin(){
+    document.getElementById("result").innerText = "⚽ Soccer game has started!";
+}
+
+// If statement
+function checkCondition(){
+
+    if (
+        id === 123 &&
+        moonPhase === "Waning Gibbous" &&
+        zodiacSign === "Libra"
+    ){
+        letTheSoccerBegin();
+    }
+    else{
+        document.getElementById("result").innerText = "Conditions not satisfied.";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

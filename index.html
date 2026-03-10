@@ -6,26 +6,26 @@
     <title>Product Catalog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #780c0c;
         }
         .header {
             background-color: #333;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 20px;
             text-align: center;
         }
         .product-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             padding: 20px;
         }
         .product-card {
-            background-color: white;
+            background-color: rgb(19, 151, 15);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 200px;
@@ -51,6 +51,7 @@
             font-weight: bold;
         }
     </style>
+    
 </head>
 <body>
     <div class="header">
@@ -62,7 +63,33 @@
         <!-- Product Cards will be injected here by JavaScript -->
     </div>
 
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
+
+<script>
+document.cookies = "username=Asif; expires=Tuesday, 31 March 2026 23:59:59 GMT; path=/";
+alert("Hello! Cookie has been set: " + document.cookies);
+
+
+let name = "my name";
+let value = " Dr Rizwana Naz Asif ";
+document.cookies = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+alert("Hello! Cookie has been set: " + document.cookies);
+
+
+//document.cookie = "user=john; max-age=3600; path=/";
+//alert("Hello! Cookie has been set: " + document.cookies);
+
+//document.cookie = "user= saramalik; max-age=0; path=/";
+//alert("Hello! Cookie has been deleted: " + document.cookies);
+
+// Returns the cookie with the given name, or undefined if not found
+
+</script>
+
+
+    
+    <img src= "images/headphone.jpg" alt="Headphones" width="20" height="20">
+
+    <!-- Link to the external JavaScript file 
+    <script src="script1.js"></script>-->
 </body>
 </html>
